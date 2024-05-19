@@ -108,7 +108,7 @@ uniqueN = function(x, by = if (is.list(x)) seq_along(x) else NULL, na.rm=FALSE) 
     x = as_list(x)
   }
   if (!length(by)) by = NULL  #4594
-  o = forderv(x, by=by, retGrp=TRUE, na.last=if (!na.rm) FALSE else NA)
+  o = forderv(x, by=by, retGrp=TRUE, sort=FALSE, na.last=if (!na.rm) FALSE else NA)
   starts = attr(o, 'starts', exact=TRUE)
   if (na.rm) {
     # TODO: internal efficient sum
